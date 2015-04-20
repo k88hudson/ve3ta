@@ -8,7 +8,7 @@ deploy:
   provider: s3
   skip_cleanup: true
   access_key_id: AKIAIF5X3OAI5OORPVKQ
-  bucket: ve3ta
+  bucket: ve3ta.com
   local-dir: site
   on:
     branch: master
