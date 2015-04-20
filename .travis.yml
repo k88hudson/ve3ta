@@ -1,0 +1,15 @@
+sudo: false
+language: node_js
+node_js:
+  - "0.12"
+before_deploy:
+  - npm run build
+deploy:
+  - provider: s3
+    skip_cleanup: true
+    access_key_id: AKIAIF5X3OAI5OORPVKQ
+    bucket: ve3ta
+    local-dir: site
+    on:
+      branch: master
+      repo: k88hudson/ve3ta

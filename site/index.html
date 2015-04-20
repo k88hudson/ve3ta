@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <title>In Memoriam – VE3TA (Paul Hudson)</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+  <img class="lead-photo" src="./img/paul.png" />
+  <h1>Paul Hudson<br /><small>(1944&ndash;2015)</small></h1>
+
+  <form id="donate" class="donation-form" method="post" action="https://www.paypal.com/cgi-bin/webscr" >
+    <h2>Donate to the memorial fund</h2>
+
+    <input type="hidden" name="item_name" value="Paul Hudson Memorial Fund" />
+    <input type="hidden" name="currency_code" value="CAD" />
+    <input type="hidden" name="notify_url" value="http://ve3ta.com/thanks">
+    <input type="hidden" name="cmd" value="_donations" />
+    <input type="hidden" name="business" value="ve3mm@rac.ca" />
+    <input type="hidden" name="env" value="www" />
+
+    <div class="group">
+      <label><input name="amount" value="20.00" type="radio" default/>$20</label>
+      <label><input name="amount" value="10.00" type="radio" />$10</label>
+      <label><input name="amount" value="5.00" type="radio" />$5</label>
+      <label><input id="custom-option" name="amount" value="" type="radio" />$ <input id="custom-input" name="custom-amount" type="text" /></label>
+    </div>
+    <div class="group">
+      <button type="submit" class="paypal-btn">Donate now with <img alt="Paypal" src="./img/paypal.png" /></button>
+    </div>
+    <p class="help-text">Secure payments by PayPal. Fund administered<br /> by VE3MM at the <a target="_blank" href="http://www.va3cco.com">Contest Club of Ontario</a></p>
+  </form>
+
+  <p>Paul Hudson (<em>VE3TA, Mr. Ace</em>) passed away peacefully at home the evening of April 17, 2015 surrounded by his family. He was a successful entrepreneur in the manufacturing of radio and television broadcasting equipment, a devoted father, a loving husband, a loyal brother and friend.<p>
+  <p>Since the 1950s, one of Paul's greatest passions was <a target="_blank" href="https://en.wikipedia.org/wiki/Amateur_radio">amateur radio</a>. He participated in many international amateur radio contests and events, most recently with the Contest Club of Ontario (VA3CCO).<p>
+
+  <p>The family has set up a <a href="#donate">memorial fund</a> with CCO to contribute to expeditions and educational efforts for the future amateur radio operators of Ontario.</p>
+
+  <p>A celebration of his life will be held at the <a target="_blank" href="https://www.google.ca/maps/place/Canadiana+Restaurant/@43.6399349,-79.5369074,14z/data=!4m5!1m2!2m1!1scanadiana+restaurant!3m1!1s0x882b37bde23ee321:0xf146a9357e5bd365">Canadiana Restaurant and Banquet hall on May 3, 6:30 PM.</a></p>
+<!--
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46198.60708283833!2d-79.50068929740621!3d43.63957621295741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b37bde23ee321%3A0xf146a9357e5bd365!2sCanadiana+Restaurant!5e0!3m2!1sen!2sca!4v1429501523840" width="400" height="300" frameborder="0" style="border:0"></iframe> -->
+
+  <script>
+    (function() {
+      var customInput = document.getElementById('custom-input');
+      var customOption = document.getElementById('custom-option');
+
+      function setValue() {
+        customOption.value = customInput.value;
+      }
+
+      function checkCustom() {
+        customOption.checked = true;
+      }
+
+      customInput.addEventListener('focus', checkCustom, false);
+      customInput.addEventListener('keyup', setValue, false);
+
+      // On load
+      setValue();
+
+    })();
+  </script>
+
+</body>
+</html>

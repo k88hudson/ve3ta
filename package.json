@@ -1,0 +1,23 @@
+{
+  "name": "ve3ta",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "rimraf site/css && mkdirp site/css && autoless --autoprefix \"last 2 versions\" src site/css",
+    "watch:css": "npm run build:css -- --source-map -w",
+    "server": "live-server ./site --port=1944",
+    "test": "npm run build",
+    "build": "npm-run-all build:*",
+    "start": "npm-run-all --parallel server watch:*"
+  },
+  "author": "@k88hudson",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "autoless": "^0.1.7",
+    "live-server": "^0.7.1",
+    "mkdirp": "^0.5.0",
+    "npm-run-all": "^1.2.3",
+    "rimraf": "^2.3.2"
+  }
+}
