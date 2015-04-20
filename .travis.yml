@@ -9,6 +9,7 @@ deploy:
   access_key_id: AKIAIF5X3OAI5OORPVKQ
   bucket: www.ve3ta.com
   local-dir: site
+  region: us-west-2
   on:
     branch: master
     repo: k88hudson/ve3ta
