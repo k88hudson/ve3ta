@@ -6,7 +6,7 @@
   "scripts": {
     "css": "rimraf site/css && mkdirp site/css && autoless --autoprefix \"last 2 versions\" src site/css",
     "build:css": "npm run css -- --no-watch",
-    "watch:css": "npm run build:css -- --source-map -w",
+    "watch:css": "npm run css -- --source-map",
     "server": "live-server ./site --port=1944",
     "test": "npm run build",
     "build": "npm-run-all build:*",
